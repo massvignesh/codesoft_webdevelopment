@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Marvel Comics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Marvel Comics</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#heroes">Heroes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#comics">Comics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Explore the Marvel Universe</h1>
+                        <p>Embark on an epic journey through the pages of Marvel Comics. Unleash your inner hero today!</p>
+                        <a href="#comics" class="btn btn-primary">Explore Comics</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Heroes Section -->
+        <section class="heroes" id="heroes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./assets/marvel.webp" alt="Marvel Heros" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <h2>Legendary Heroes</h2>
+                        <p>In the vast and storied universe of Marvel Comics, legendary heroes abound, each possessing extraordinary abilities and compelling narratives that captivate audiences worldwide. From the friendly neighborhood Spider-Man, whose quick wit and sense of responsibility make him a beloved icon, to the invincible Iron Man, whose genius intellect and armored prowess protect the world from threats both terrestrial and extraterrestrial, Marvel's pantheon of heroes embodies the virtues of courage, sacrifice, and unwavering determination. Characters like Captain America, the embodiment of honor and patriotism, and the thunderous Thor, Norse god of thunder, stand as symbols of righteousness and valor, while the enigmatic Black Widow and the fierce Wolverine showcase the depth and complexity of Marvel's diverse roster. Whether battling cosmic entities or confronting inner demons, these legendary heroes inspire and uplift, reminding us of the power of heroism in the face of adversity.
+                            .</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comics Section -->
+        <section class="comics" id="comics">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Discover Marvel Comics</h2>
+                        <p>Delve into a vast collection of comics featuring your favorite characters. Immerse yourself in thrilling adventures and gripping stories.</p>
+                        <a href="#" class="btn btn-secondary">Browse Comics</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="comic-images">
+                            <img src="./assets/4.jpg" alt="Comic 1" class="img-fluid comic-image">
+                            <img src="./assets/6.jpg" alt="Comic 2" class="img-fluid comic-image">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Contact Us</h2>
+                        <p>Have questions or want to know more about our comic collection? Feel free to get in touch with us.        -mass@gmail.com</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2024 Mass - Marvel Comics. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (event) {
+                event.preventDefault();
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+            $(window).scroll(function () {
+                $('.fade-in').each(function () {
+                    const bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    const bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    if (bottom_of_window > bottom_of_element) {
+                        $(this).addClass('fade-in-element');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

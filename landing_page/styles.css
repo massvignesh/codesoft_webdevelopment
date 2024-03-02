@@ -1,0 +1,163 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff9900; /* Change color on hover */
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+
+.search-input {
+  border: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-icon {
+  background-color: #ff9900;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.panel {
+  background-image: url('bookshop.jpg'); /* Change the background image */
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.panel h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.panel p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.panel a {
+  background-color: #ff9900;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.panel a:hover {
+  background-color: #cc6600; /* Darker shade on hover */
+}
+
+/* Main Content Section */
+.sections {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.sections a {
+  font-size: 1.5em;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+}
+
+.our-service {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  margin: 0 10px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.box-content h2 {
+  margin-bottom: 10px;
+}
+
+.box-content a {
+  background-color: #ff9900;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.box-content a:hover {
+  background-color: #cc6600; /* Darker shade on hover */
+}
+
+.follow {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.follow a {
+  color: white;
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copy p {
+  margin: 5px 0;
+}
